@@ -5,7 +5,7 @@ angular.module('com.ngnice.app').directive('bfCaptcha', function bfCaptcha() {
     restrict: 'A',
     link: function (scope, element) {
       var changeSrc = function() {
-        element.attr('src', '/api/captcha.jpg?random=' + new Date().getTime());
+        element.attr('src', '/api/captcha?random=' + new Date().getTime());
       };
       changeSrc();
       element.on('click', function() {
